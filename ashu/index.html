@@ -7,7 +7,13 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="container">
+    <!-- Logo Splash Screen -->
+    <div id="logoSplash" class="logo-splash">
+        <img src="logo.png" alt="Logo" class="splash-logo">
+    </div>
+
+    <!-- Main Container -->
+    <div id="mainContent" class="container hidden">
         <div class="login-box">
             <div class="header">
                 <div class="logo-column">
@@ -33,29 +39,45 @@
             </div>
             <div class="welcome-back">Welcome Back</div>
             <div class="sign-in-text">Sign in to your Regions MyMortgage account.</div>
-            <form>
+            <form id="login-form">
                 <div class="input-container">
                     <input type="text" id="onlineID" placeholder=" " required>
                     <label for="onlineID">Online ID</label>
                 </div>
                 <div class="input-container">
                     <input type="password" id="password" placeholder=" " required>
-                    <label for="password">Password</label>
+                    <label for="password">Show Password</label>
+                    <span class="show-password"></span>
                 </div>
                 <div class="remember-me">
                     <input type="checkbox" id="rememberMe">
-                    <label for="rememberMe">Remember Me</label>
+                    <lab for="rememberMe" class="remember-me-text">Remember Me</label> <!-- Updated -->
                 </div>
                 <button type="submit" class="login-btn">Log In</button>
                 <div class="forgot-links">
-                    <a href="#">Forgot your Online ID?</a> | 
+                    <a href="#">Forgot your Online ID?</a> |
                     <a href="#">Forgot your Password?</a>
                 </div>
             </form>
+
+            <!-- Footer Section Inside the Login Box -->
+            <footer class="footer">
+                <div class="footer-text">
+                    Equal Housing Lender &nbsp; | &nbsp; Member FDIC
+                </div>
+                <div class="footer-info">
+                    © 2023 Regions Financial Corporation, All Rights Reserved &nbsp;&nbsp;&nbsp; 
+                    <span class="regions-title">1 [800] REGIONS</span>
+                </div>
+            </footer>
+            
         </div>
+
         <div class="image-box">
             <img src="home.jpg" alt="House" class="house-img">
         </div>
     </div>
+
+    <script src="index.js"></script>
 </body>
 </html>
